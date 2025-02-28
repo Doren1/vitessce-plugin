@@ -1,0 +1,12 @@
+# Node.js dependencies
+node_modules/
+dist/
+build/
+.vscode/
+.DS_Store
+*.log
+*.lock
+
+# OS-specific
+Thumbs.db
+
