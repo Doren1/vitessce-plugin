@@ -1,0 +1,25 @@
+{
+  "name": "@vitessce/example-configs",
+  "private": true,
+  "version": "3.5.6",
+  "author": "HIDIVE Lab at HMS",
+  "homepage": "http://vitessce.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitessce/vitessce.git"
+  },
+  "license": "MIT",
+  "main": "dist-tsc/index.js",
+  "files": [
+    "dist-tsc",
+    "src"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "@vitessce/config": "workspace:*",
+    "@vitessce/constants": "workspace:*",
+    "@vitessce/zarr-utils": "workspace:*",
+    "@vitessce/vit-s": "workspace:*",
+    "@vitessce/biomarker-select": "workspace:*"
+  }
+}

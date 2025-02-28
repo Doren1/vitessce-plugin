@@ -1,0 +1,227 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+:root {
+  --ifm-color-primary: #49a5b7;
+  --ifm-color-primary-dark: rgb(33, 175, 144);
+  --ifm-color-primary-darker: rgb(31, 165, 136);
+  --ifm-color-primary-darkest: rgb(26, 136, 112);
+  --ifm-color-primary-light: rgb(70, 203, 174);
+  --ifm-color-primary-lighter: rgb(102, 212, 189);
+  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-code-font-size: 95%;
+
+  --ifm-navbar-height: 3.0rem;
+  --ifm-vitessce-toolbar-height: 28px;
+
+  --vit-input-foreground: #0451a5;
+  --vit-input-background: #ffffff;
+  --dropzone: #989898;
+  --code-block-background: rgb(246, 248, 250);
+
+  --hero-banner-background: #49a5b7;
+
+  font-family: 'Inter', sans-serif;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+}
+
+:root[data-theme='dark'] {
+  --ifm-navbar-background-color: #333;
+  --ifm-footer-background-color: rgb(73, 73, 73);
+  --vit-input-background: #202124;
+  --vit-input-foreground: #9cdcfe;
+  --dropzone: #5f5f60;
+  --code-block-background: rgb(40, 42, 54);
+  --docusaurus-highlighted-code-line-bg: rgba(66, 66, 66, 0.35);
+}
+
+.table-of-contents a code {
+  color: var(--ifm-toc-link-color);
+  text-decoration: var(--ifm-link-decoration);
+  font-family: var(--ifm-font-family-monospace);
+  background-color: transparent;
+  border: 0;
+  border-radius: inherit;
+  font-size: 0.7rem;
+  padding: inherit;
+}
+
+.demo-header.vitessce-expanded {
+  display: none;
+}
+
+.vitessce-and-toolbar {
+  position: relative;
+  right: 0;
+  width: 100%;
+  height: calc(800px + var(--ifm-vitessce-toolbar-height));
+}
+
+.vitessce-and-toolbar.vitessce-expanded {
+  position: absolute;
+  top: var(--ifm-navbar-height);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--ifm-navbar-height));
+}
+
+.vitessce-toolbar {
+  position: relative;
+  width: 100%;
+  height: var(--ifm-vitessce-toolbar-height);
+}
+
+.vitessce-toolbar-buttons {
+  position: absolute;
+  right: calc(10% + 10px);
+  display: inline-block;
+  width: auto;
+}
+
+.vitessce-toolbar-buttons.vitessce-expanded {
+  right: 10px;
+}
+
+.vitessce-toolbar-buttons > button {
+  border: 2px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  background-color: transparent;
+  line-height: 1.2em;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 1px 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.vitessce-app {
+  flex: 1;
+  position: relative;
+}
+
+.vitessce-app .vitessce-container {
+  width: 80%;
+  left: 10%
+}
+
+.vitessce-app.vitessce-expanded .vitessce-container {
+  position: relative;
+  width: 100%;
+  left: 0;
+  height: calc(100vh - var(--ifm-navbar-height) - var(--ifm-vitessce-toolbar-height));
+}
+
+.vitessce-container.vitessce-theme-light .card {
+  border: none !important;
+}
+
+.vitessce-container.vitessce-theme-dark .card {
+  border: none !important;
+}
+
+.vitessce-container table * {
+  border: none;
+}
+
+.vitessce-container table tr:nth-child(2n) {
+  background-color: transparent;
+}
+
+.monaco-editor {
+  box-shadow: -3px 3px 5px 5px rgba(0,0,0,.06);
+}
+
+.table-concat tr:nth-child(2n) {
+  background-color: transparent;
+}
+
+.table-concat td {
+  text-align: center;
+}
+
+div[role='tooltip'] table tr {
+  background-color: transparent;
+  border-top: none;
+}
+
+div[role='tooltip'] table {
+  margin-bottom: 0;
+}
+
+div[role='tooltip'] table td, div[role='tooltip'] table th {
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+
+.ar-16x9 {
+  aspect-ratio: 16 / 9;
+}
+
+.hero__title {
+  max-width: 400px;
+  width: 90%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Reference: https://github.com/facebook/docusaurus/blob/275f50/website/src/css/custom.css#L74 */
+.header-github-link:hover {
+  opacity: 0.6;
+}
+
+.header-github-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat;
+}
+
+[data-theme='dark'] .header-github-link::before {
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat;
+}
+
+/* Speaker icon */
+.header-pronunciation-link:hover {
+  opacity: 0.6;
+}
+
+.header-pronunciation-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="currentColor" d="M157.27 21.22a12 12 0 0 0-12.64 1.31L75.88 76H32a20 20 0 0 0-20 20v64a20 20 0 0 0 20 20h43.88l68.75 53.47A12 12 0 0 0 164 224V32a12 12 0 0 0-6.73-10.78ZM36 100h32v56H36Zm104 99.46l-48-37.33V93.87l48-37.33ZM212 128a44 44 0 0 1-11 29.11a12 12 0 1 1-18-15.88a20 20 0 0 0 0-26.43a12 12 0 0 1 18-15.86A43.94 43.94 0 0 1 212 128Zm40 0a83.87 83.87 0 0 1-21.39 56a12 12 0 0 1-17.89-16a60 60 0 0 0 0-80a12 12 0 1 1 17.88-16a83.87 83.87 0 0 1 21.4 56Z"/></svg>');
+  background-repeat: no-repeat;
+}
+
+[data-theme='dark'] .header-pronunciation-link::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="white" d="M157.27 21.22a12 12 0 0 0-12.64 1.31L75.88 76H32a20 20 0 0 0-20 20v64a20 20 0 0 0 20 20h43.88l68.75 53.47A12 12 0 0 0 164 224V32a12 12 0 0 0-6.73-10.78ZM36 100h32v56H36Zm104 99.46l-48-37.33V93.87l48-37.33ZM212 128a44 44 0 0 1-11 29.11a12 12 0 1 1-18-15.88a20 20 0 0 0 0-26.43a12 12 0 0 1 18-15.86A43.94 43.94 0 0 1 212 128Zm40 0a83.87 83.87 0 0 1-21.39 56a12 12 0 0 1-17.89-16a60 60 0 0 0 0-80a12 12 0 1 1 17.88-16a83.87 83.87 0 0 1 21.4 56Z"/></svg>');
+  background-repeat: no-repeat;
+}
+
+.navbar__inner {
+  --ifm-navbar-item-padding-vertical: 0;
+}
+
+@media (max-width: 1160px) {
+  .DocSearch-Button-Placeholder, .DocSearch-Button-Keys, .header-pronunciation-link {
+    display: none !important;
+  }
+}

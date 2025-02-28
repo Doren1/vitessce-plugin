@@ -1,0 +1,75 @@
+{
+  "name": "@vitessce/gl",
+  "version": "3.5.6",
+  "author": "HIDIVE Lab at HMS",
+  "homepage": "http://vitessce.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitessce/vitessce.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "dist-tsc/index.js",
+  "publishConfig": {
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "exports": {
+      ".": {
+        "types": "./dist-tsc/index.d.ts",
+        "import": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "src",
+    "dist",
+    "dist-tsc"
+  ],
+  "scripts": {
+    "bundle": "pnpm exec vite build -c ../../scripts/vite.config.js",
+    "test": "pnpm exec vitest --run",
+    "glslify": "cat src/glsl/colormaps.in.glsl | glslify > src/glsl/colormaps.out.glsl"
+  },
+  "dependencies": {
+    "@deck.gl/aggregation-layers": "catalog:deck.gl",
+    "@deck.gl/core": "catalog:deck.gl",
+    "@deck.gl/extensions": "catalog:deck.gl",
+    "@deck.gl/geo-layers": "catalog:deck.gl",
+    "@deck.gl/layers": "catalog:deck.gl",
+    "@deck.gl/mesh-layers": "catalog:deck.gl",
+    "@deck.gl/react": "catalog:deck.gl",
+    "@hms-dbmi/viv": "catalog:",
+    "@loaders.gl/3d-tiles": "catalog:loaders.gl",
+    "@loaders.gl/core": "catalog:loaders.gl",
+    "@loaders.gl/images": "catalog:loaders.gl",
+    "@loaders.gl/loader-utils": "catalog:loaders.gl",
+    "@luma.gl/constants": "catalog:luma.gl",
+    "@luma.gl/core": "catalog:luma.gl",
+    "@luma.gl/engine": "catalog:luma.gl",
+    "@luma.gl/experimental": "catalog:luma.gl",
+    "@luma.gl/gltools": "catalog:luma.gl",
+    "@luma.gl/shadertools": "catalog:luma.gl",
+    "@luma.gl/webgl": "catalog:luma.gl",
+    "@math.gl/core": "catalog:",
+    "@nebula.gl/edit-modes": "catalog:nebula.gl",
+    "@nebula.gl/layers": "catalog:nebula.gl",
+    "@turf/area": "catalog:turf",
+    "@turf/boolean-contains": "catalog:turf",
+    "@turf/boolean-overlap": "catalog:turf",
+    "@turf/boolean-point-in-polygon": "catalog:turf",
+    "@turf/boolean-within": "catalog:turf",
+    "@turf/centroid": "catalog:turf",
+    "@turf/helpers": "catalog:turf",
+    "@vitessce/utils": "workspace:*",
+    "d3-array": "catalog:",
+    "deck.gl": "catalog:deck.gl",
+    "glslify": "^7.0.0",
+    "lodash-es": "catalog:",
+    "math.gl": "catalog:",
+    "mathjs": "catalog:",
+    "nebula.gl": "catalog:nebula.gl"
+  },
+  "devDependencies": {
+    "glsl-colormap": "^1.0.1"
+  }
+}
